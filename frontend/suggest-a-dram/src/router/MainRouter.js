@@ -5,6 +5,7 @@ import HomePage from '../components/HomePage';
 import QuizWrapper from '../containers/QuizWrapper';
 import SearchWrapper from '../containers/SearchWrapper';
 import NavBar from '../components/NavBar';
+import LoginWrapper from '../containers/LoginWrapper';
 
 // Build Router
 export default function MainRouter() {
@@ -17,6 +18,8 @@ export default function MainRouter() {
 
                 <NavBar />
 
+                {console.log("before routes")}
+
                 <Switch>
                     <Route exact path="/" component={HomePage} />
                 </Switch>
@@ -27,6 +30,10 @@ export default function MainRouter() {
 
                 <Switch>
                     <Route exact path="/all" component={SearchWrapper} />
+                </Switch>
+
+                <Switch>
+                    <Route exact path="/auth" component={LoginWrapper} />
                 </Switch>
 
             </Fragment>
